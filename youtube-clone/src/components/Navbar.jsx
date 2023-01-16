@@ -1,7 +1,8 @@
+import { Stack } from "@mui/system";
 import React from "react";
 
 const Navbar = () => {
-  return <div>Navbar</div>;
+  return <Stack>heelo</Stack>;
 };
 
 export default Navbar;
