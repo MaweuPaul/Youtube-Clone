@@ -22,6 +22,7 @@ const Feed = () => {
           copyright 2023 Paul Maweu
         </Typography>
       </Box>
+
       {/* starting on videos */}
       <Box sx={{ overflowY: "auto", height: "100vh", flex: 2 }}>
         <Typography
