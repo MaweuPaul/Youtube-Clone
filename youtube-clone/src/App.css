@@ -3,6 +3,10 @@
   padding: 0;
   box-sizing: border-box;
 }
+.search-bar {
+  outline: none;
+  width: 300px;
+}
 .youtube {
   text-decoration: none;
   font-weight: bold;
@@ -28,8 +32,11 @@
   transition: all 0.4s ease;
   padding: 0.7rem;
 }
+.icon {
+  font-size: 20px;
+}
 .section-button:hover {
-  background-color: #ad9927;
+  background-color: #ff6b08;
 }
 .section-button span:hover {
   color: white;
@@ -49,7 +56,7 @@
   }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 895px) {
   .copyright {
     display: none !important;
   }
@@ -64,6 +71,11 @@
     height: 45vh !important;
   }
   .search-bar {
-    width: 200px;
+    width: 150px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .search-icon {
+    margin-left: 4rem;
   }
 }
