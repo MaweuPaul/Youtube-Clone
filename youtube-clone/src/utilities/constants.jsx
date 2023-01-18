@@ -13,7 +13,7 @@ import DeveloperModeIcon from "@mui/icons-material/DeveloperMode";
 
 export const logo = "https://i.ibb.co/s9Qys2j/logo.png";
 
-export const categories = [
+export const Sections = [
   { name: "New", icon: <AiFillHome /> },
   { name: "Music", icon: <BsMusicNote /> },
   { name: "Education", icon: <MdSchool /> },
