@@ -9,7 +9,7 @@ const Feed = () => {
       <Box
         sx={{
           height: { sx: "auto", md: "92vh" },
-          borderRight: "1px solid gold",
+          borderRight: "1px solid #ff6b08",
           px: { sx: 0, md: 2 },
         }}
       >
@@ -20,6 +20,18 @@ const Feed = () => {
           sx={{ mt: 2, color: "white" }}
         >
           copyright 2023 Paul Maweu
+        </Typography>
+      </Box>
+      {/* starting on videos */}
+      <Box sx={{ overflowY: "auto", height: "100vh", flex: 2 }}>
+        <Typography
+          variant="h4"
+          fontWeight="bold"
+          marginLeft={2}
+          marginBottom={2}
+          sx={{ color: "white" }}
+        >
+          New <span style={{ color: "#ff6b08" }}>videos</span>
         </Typography>
       </Box>
     </Stack>
