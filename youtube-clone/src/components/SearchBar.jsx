@@ -26,7 +26,7 @@ const SearchBar = () => {
         onChange={() => {}}
       />
       <IconButton type="submit" sx={{ p: 0.3, width: { lg: 100 }, mr: 0 }}>
-        <BiSearch />
+        <BiSearch className="search-icon" />
       </IconButton>
     </Paper>
   );
