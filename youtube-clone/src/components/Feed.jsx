@@ -2,7 +2,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import Typography from "@mui/material/Typography";
 import { Box, Stack } from "@mui/system";
-import Sidebar from "./Sidebar";
+import { Sidebar, Videos } from "./index";
 const Feed = () => {
   return (
     <Stack sx={{ flexDirection: { sx: "column", md: "row" } }}>
@@ -34,6 +34,8 @@ const Feed = () => {
         >
           New <span style={{ color: "#ff6b08" }}>videos</span>
         </Typography>
+
+        <Videos />
       </Box>
     </Stack>
   );
