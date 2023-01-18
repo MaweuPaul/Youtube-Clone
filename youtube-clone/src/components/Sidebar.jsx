@@ -17,14 +17,15 @@ const Sidebar = () => {
         <button
           className="section-button"
           style={{
-            background: section.name === selectedSection && "#ad9927",
+            background: section.name === selectedSection && "#ff6b08",
             color: "white",
           }}
           key={section.name}
         >
           <span
+            className="icon"
             style={{
-              color: section.name === selectedSection ? "white" : "#ad9927",
+              color: section.name === selectedSection ? "white" : "#ff6b08",
               marginRight: "10px",
             }}
           >
