@@ -3,7 +3,16 @@ import { useState, useEffect } from "react";
 import Typography from "@mui/material/Typography";
 import { Box, Stack } from "@mui/system";
 import { Sidebar, Videos } from "./index";
+import { Api } from "../utilities/Api";
 const Feed = () => {
+  const [selectedSection, setSelectedSection] = useState("New");
+  const [videos, setVideos] = useState([]);
+  useEffect(() => {
+    Api(`search? part=snippet&q=${selectedSection}`).then((data) =>
+      setVideos(data.items)
+    );
+  }, [selectedSection]);
+
   return (
     <Stack sx={{ flexDirection: { sx: "column", md: "row" } }}>
       <Box
@@ -13,7 +22,10 @@ const Feed = () => {
           px: { sx: 0, md: 2 },
         }}
       >
-        <Sidebar />
+        <Sidebar
+          selectedSection={selectedSection}
+          setSelectedSection={setSelectedSection}
+        />
         <Typography
           className="copyright"
           variant="body2"
@@ -32,10 +44,10 @@ const Feed = () => {
           marginBottom={2}
           sx={{ color: "white" }}
         >
-          New <span style={{ color: "#ff6b08" }}>videos</span>
+          {selectedSection} <span style={{ color: "#ff6b08" }}>videos</span>
         </Typography>
 
-        <Videos />
+        <Videos videos={[videos]} />
       </Box>
     </Stack>
   );
