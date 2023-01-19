@@ -2,8 +2,7 @@ import React from "react";
 import { Stack } from "@mui/system";
 import { Sections } from "../utilities/constants";
 
-const selectedSection = "New";
-const Sidebar = () => {
+const Sidebar = ({ selectedSection, setSelectedSection }) => {
   return (
     <Stack
       direction="row"
@@ -15,6 +14,7 @@ const Sidebar = () => {
     >
       {Sections.map((section) => (
         <button
+          onClick={() => setSelectedSection(section.name)}
           className="section-button"
           style={{
             background: section.name === selectedSection && "#ff6b08",
