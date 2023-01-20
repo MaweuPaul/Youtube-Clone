@@ -6,10 +6,12 @@ const Videos = ({ videos }) => {
   return (
     <Stack flexWrap="wrap" justifyContent="start" direction="row" gap={2}>
       {videos.map((item, index) => {
-        <Box key={index}>
-          {item.id.videoId && <VideoCard video={item} />}
-          {/* {item.snippet.channelId && <ChannelCard channelDetail={item} />} */}
-        </Box>;
+        return (
+          <Box key={index}>
+            {item.id.videoId && <VideoCard video={item} />}
+            {item.snippet.channelId && <ChannelCard channelDetail={item} />}
+          </Box>
+        );
       })}
     </Stack>
   );
