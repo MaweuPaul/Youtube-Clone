@@ -47,7 +47,7 @@ const Feed = () => {
           {selectedSection} <span style={{ color: "#ff6b08" }}>videos</span>
         </Typography>
 
-        <Videos videos={[videos]} />
+        <Videos videos={videos} />
       </Box>
     </Stack>
   );
