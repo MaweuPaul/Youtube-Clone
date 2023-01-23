@@ -2,7 +2,6 @@ import { Stack, Card, CardMedia, CardContent, Typography } from "@mui/material";
 
 import { Link } from "react-router-dom";
 import React from "react";
-import { color, height, width } from "@mui/system";
 import { BiCheckCircle } from "react-icons/bi";
 
 const VideoCard = ({
@@ -29,25 +28,25 @@ const VideoCard = ({
           alt={snippet.title}
           sx={{ height: 180 }}
         />
-        <CardContent
-          sx={{ background: "#1e1e1e", height: "100px", width: "400px" }}
-        >
-          <Link to={`/video/${videoId}`}>
-            <Typography variant="body1" color="white">
-              {snippet.title.slice(0, 60)}
-            </Typography>
-          </Link>
-          <Link to={snippet.channelId ? `/channel/${snippet.channelId}` : ""}>
-            <Typography variant="body2" color="gray">
-              By: {snippet.channelTitle.slice(0, 60)}
-              <BiCheckCircle
-                fontSize={18}
-                style={{ marginLeft: "0.3rem", color: "gray" }}
-              />
-            </Typography>
-          </Link>
-        </CardContent>
       </Link>
+      <CardContent
+        sx={{ background: "#1e1e1e", height: "100px", width: "300px" }}
+      >
+        <Link to={`/video/${videoId}`}>
+          <Typography variant="body1" color="white">
+            {snippet.title.slice(0, 50)}
+          </Typography>
+        </Link>
+        <Link to={`/channel/${snippet.channelId}`}>
+          <Typography variant="body2" color="gray">
+            By: {snippet.channelTitle.slice(0, 60)}
+            <BiCheckCircle
+              fontSize={18}
+              style={{ marginLeft: "0.3rem", color: "gray" }}
+            />
+          </Typography>
+        </Link>
+      </CardContent>
     </Card>
   );
 };
