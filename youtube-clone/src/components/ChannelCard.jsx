@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Typography, CardMedia, CardContent } from "@mui/material";
+import { Box, CardMedia, CardContent } from "@mui/material";
 import { Link } from "react-router-dom";
 const ChannelCard = ({ channelDetail }) => {
   return (
@@ -15,7 +15,7 @@ const ChannelCard = ({ channelDetail }) => {
           }}
         >
           <CardMedia
-            image={channelDetail.snippet.thumbnails.high.url}
+            image={channelDetail.snippet.thumbnails.medium.url}
             alt={channelDetail?.snippet.title}
             sx={{ borderRadius: "50%", height: "180px", width: "180px" }}
           ></CardMedia>
