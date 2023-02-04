@@ -36,7 +36,7 @@ const Feed = () => {
       </Box>
 
       {/* starting on videos */}
-      <Box sx={{ overflowY: "auto", height: "100vh", flex: 2 }}>
+      <Box sx={{ marginLeft: 3, overflowY: "auto", height: "100vh", flex: 2 }}>
         <Typography
           variant="h4"
           fontWeight="bold"
