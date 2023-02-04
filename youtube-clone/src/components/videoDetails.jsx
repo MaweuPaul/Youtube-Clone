@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
-import ReactPlayer from "react-player/lazy";
+import ReactPlayer from "react-player";
 import { Typography, Box, Stack } from "@mui/material";
 import Videos from "./Videos";
 import { Api } from "../utilities/Api";
