@@ -15,7 +15,7 @@ const Search = () => {
   }, [searchTerm]);
 
   return (
-    <Box sx={{ overflowY: "auto", height: "100vh", flex: 2 }}>
+    <Box sx={{ overflowY: "auto", marginLeft: 3, height: "100vh", flex: 2 }}>
       <Typography
         variant="h4"
         fontWeight="bold"
