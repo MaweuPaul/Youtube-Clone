@@ -5,7 +5,7 @@ import {
   Navbar,
   Feed,
   Search,
-  Videos,
+  VideoDetails,
   ChannelDetail,
 } from "./components/index";
 const App = () => (
@@ -13,7 +13,7 @@ const App = () => (
     <Navbar />
     <Routes>
       <Route path="/" exact element={<Feed />} />
-      <Route path="/video/:id" element={<Videos />} />
+      <Route path="/video/:id" element={<VideoDetails />} />
       <Route path="/channel/:id" element={<ChannelDetail />} />
       <Route path="/search/:searchTerm" element={<Search />} />
     </Routes>
