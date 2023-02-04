@@ -31,13 +31,13 @@ const VideoCard = ({
       <CardContent
         sx={{ background: "#1e1e1e", height: "100px", width: "300px" }}
       >
-        <Link to={`/video/${videoId}`}>
+        <Link to={`videoId? /video/${videoId}`}>
           <Typography variant="body1" color="white">
             {snippet.title.slice(0, 50)}
           </Typography>
         </Link>
         <Link to={`/channel/${snippet.channelId}`}>
-          <Typography variant="body2" color="gray">
+          <Typography variant="body2" color="gray" underline="none">
             By: {snippet.channelTitle.slice(0, 60)}
             <BiCheckCircle
               fontSize={18}
