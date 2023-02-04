@@ -9,7 +9,6 @@ const SearchBar = () => {
     e.preventDefault();
     if (search) {
       navigate(`/search/${search}`);
-      setSearch("");
     }
   };
   return (
