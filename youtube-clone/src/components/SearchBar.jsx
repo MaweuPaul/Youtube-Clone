@@ -1,15 +1,20 @@
-import React from "react";
-import { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import { Paper, Button, IconButton } from "@mui/material";
+import React, { useState } from "react";
+import { Paper, IconButton } from "@mui/material";
 import { BiSearch } from "react-icons/bi";
-import { color, width } from "@mui/system";
-import { lightGreen } from "@mui/material/colors";
+import { useNavigate } from "react-router-dom";
 const SearchBar = () => {
+  const [search, setSearch] = useState("");
+  const navigate = useNavigate();
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (search) {
+      navigate(`/search/${search}`);
+    }
+  };
   return (
     <Paper
       component="form"
-      onSubmit={() => {}}
+      onSubmit={handleSubmit}
       sx={{
         borderRadius: 10,
         border: "1px solid #e3e3e3",
@@ -22,8 +27,10 @@ const SearchBar = () => {
         style={{ border: "none", outline: "none" }}
         className="search-bar "
         placeholder="search"
-        value=""
-        onChange={() => {}}
+        value={search}
+        onChange={(e) => {
+          setSearch(e.target.value);
+        }}
       />
       <IconButton type="submit" sx={{ p: 0.3, width: { lg: 100 }, mr: 0 }}>
         <BiSearch className="search-icon" />
