@@ -1,5 +1,4 @@
-import { Stack, Card, CardMedia, CardContent, Typography } from "@mui/material";
-
+import { Card, CardMedia, CardContent, Typography } from "@mui/material";
 import { Link } from "react-router-dom";
 import React from "react";
 import { BiCheckCircle } from "react-icons/bi";
