@@ -6,7 +6,7 @@ import { Videos, ChannelCard } from "./index";
 import { Api } from "../utilities/Api";
 const ChannelDetails = () => {
   const [channelDetail, setChannelDetail] = useState();
-  const [videos, setVideos] = useState(null);
+  const [videos, setVideos] = useState([]);
   const { id } = useParams();
 
   useEffect(() => {
@@ -30,6 +30,11 @@ const ChannelDetails = () => {
           }}
         />
         <ChannelCard channelDetail={channelDetail} marginTop="90px" />
+      </Box>
+      <Box display="flex" p="2">
+        <Box SX={{ mr: { sm: "100px" } }}>
+          <Videos videos={videos} />
+        </Box>
       </Box>
     </Box>
   );
