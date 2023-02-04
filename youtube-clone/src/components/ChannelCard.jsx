@@ -1,10 +1,11 @@
 import React from "react";
-import { Box, CardMedia, CardContent } from "@mui/material";
+import { Box, CardMedia, CardContent, Typography } from "@mui/material";
 import { Link } from "react-router-dom";
+import { BiCheckCircle } from "react-icons/bi";
 const ChannelCard = ({ channelDetail }) => {
   return (
     <Box sx={{ borderRadius: "20px" }}>
-      <Link to={`/channel/${channelDetail.id.channelId}`}>
+      <Link to={`/channel/${channelDetail?.id?.channelId}`}>
         <CardContent
           sx={{
             display: "flex",
@@ -14,11 +15,22 @@ const ChannelCard = ({ channelDetail }) => {
             color: "white",
           }}
         >
-          <CardMedia
-            image={channelDetail.snippet.thumbnails.medium.url}
-            alt={channelDetail?.snippet.title}
-            sx={{ borderRadius: "50%", height: "180px", width: "180px" }}
-          ></CardMedia>
+          {" "}
+          {/* <Typography variant="h6">
+            {channelDetail?.snippet?.title}{" "}
+            <BiCheckCircle
+              sx={{ fontSize: "14px", color: "gray", ml: "5px" }}
+            />
+          </Typography> */}
+          {channelDetail?.statistics?.subscriberCount && (
+            <Typography>
+              {" "}
+              Subscribers {""}
+              {parseInt(
+                channelDetail.statistics.subscriberCount
+              ).toLocaleString()}
+            </Typography>
+          )}
         </CardContent>
       </Link>
     </Box>
